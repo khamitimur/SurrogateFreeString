@@ -15,17 +15,16 @@ This will create a representation of your string where any surrogate pair will c
 After that you can manipulate it just like a `string`. Actually for now there are only `Substring(int, int)` and `Substring(int)` methods.
 
 ```c#
-SFString firstToCharacters = surrogateFreeString.Substring(0, 2);
+SFString firstTwoCharacters = surrogateFreeString.Substring(0, 2);
 SFString allCharactersAfterFirstTwo = surrogateFreeString.Substring(2);
 ```
 
 To get a `string` after you finished minupulations you wanted just use `ToString()`.
 
 ```c#
-var finalString = firstToCharacters.ToString();
+var finalString = firstTwoCharacters.ToString();
 ```
 
 ## License
 
-This project is licensed under the WTFPL License.
-See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [WTFPL License](LICENSE).
