@@ -11,7 +11,7 @@ Create new `SFString` object by passing your string into a constructor.
 string exampleString = @"This 👉 is 🅰 an example string with emojis 👨‍👩‍👧‍👧.";
 SFString surrogateFreeString = new SFString(exampleString);
 ```
-This will create a representation of your string where all surrogate pairs will count as one symbol.
+This will create a representation of your string where any surrogate pair will count as one symbol.
 After that you can manipulate it just like a `string`. Actually for now there are only `Substring(int, int)` and `Substring(int)` methods.
 
 ```c#
