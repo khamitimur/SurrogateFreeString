@@ -1,6 +1,7 @@
 # SurrogateFreeString
 
 A small library to help you manipulate strings without paying attention to supplementary characters.
+
 You can visit [MSDN](https://msdn.microsoft.com/ru-ru/library/windows/desktop/dd374069(v=vs.85).aspx) for detailed information about supplementary characters and surrogates.
 
 ## How To
