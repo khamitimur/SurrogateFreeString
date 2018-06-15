@@ -6,7 +6,7 @@ A small library to help you manipulate strings without paying attention to suppl
 
 Create new `SFString` object by passing your string into constructor
 
-```
+```c#
 string exampleString = @"This 👉 is 🅰 test string with emojis 👨‍👩‍👧‍👧.";
 SFString surrogateFreeString = new SFString(exampleString);
 ```
