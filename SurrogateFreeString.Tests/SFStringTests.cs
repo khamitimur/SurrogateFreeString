@@ -16,25 +16,35 @@ namespace SurrogateFreeString.Tests
         [TestMethod]
         public void SFString_Length()
         {
-            var sfstring = new SFString(TEST_STRING);
+            var sfString = new SFString(TEST_STRING);
 
-            Assert.AreEqual(107, sfstring.Length);
+            Assert.AreEqual(107, sfString.Length);
         }
 
         [TestMethod]
         public void SFString_ActualLength()
         {
-            var sfstring = new SFString(TEST_STRING);
+            var sfString = new SFString(TEST_STRING);
 
-            Assert.AreEqual(113, sfstring.ActualLength);
+            Assert.AreEqual(113, sfString.ActualLength);
         }
 
         [TestMethod]
         public void SFString_ToString()
         {
-            var sfstring = new SFString(TEST_STRING);
+            var sfString = new SFString(TEST_STRING);
 
-            Assert.AreEqual(TEST_STRING, sfstring.ToString());
+            Assert.AreEqual(TEST_STRING, sfString.ToString());
+        }
+
+        [TestMethod]
+        public void SFString_Substring()
+        {
+            var firstSubstringSFString = new SFString(TEST_STRING).Substring(0, 9);
+            var secondSubstringSFString = new SFString(TEST_STRING).Substring(12);
+
+            Assert.AreEqual(@"This 👉 is", firstSubstringSFString.ToString());
+            Assert.AreEqual(@"test string with emojis 👨‍👩‍👧‍👧. Did you know that family emoji is just 4 emojis melt together?", secondSubstringSFString.ToString());
         }
 
         #endregion
