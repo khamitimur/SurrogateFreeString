@@ -4,4 +4,4 @@ A small library to help you manipulate strings without paying attention to suppl
 
 ## License
 
-This project is licensed under the WTFPL License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the WTFPL License - see the [LICENSE](LICENSE) file for details
