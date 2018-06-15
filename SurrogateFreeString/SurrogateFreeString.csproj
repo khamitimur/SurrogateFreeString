@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Authors>Timur Khamidov</Authors>
+    <Description>A small library to help you manipulate strings without paying attention to supplementary characters.</Description>
+    <RepositoryUrl>https://bitbucket.org/khamitimur/surrogatefreestring</RepositoryUrl>
+    <PackageTags>string, char, supplementary character, emoji</PackageTags>
+  </PropertyGroup>
+
+</Project>
