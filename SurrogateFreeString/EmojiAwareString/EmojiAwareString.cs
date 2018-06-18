@@ -40,16 +40,20 @@ namespace SurrogateFreeString
         {
             var items = new List<StringItem>();
 
-            // It can't be null but whatever.
+            // Can't be null but whatever.
             if (string.IsNullOrEmpty(@String))
                 return items;
 
-            var charsMap = GetCharsMapList();
+            var charsMapItemsList = GetCharsMapItemsList();
+            foreach (var charMapItem in charsMapItemsList)
+            {
+
+            }
 
             return items;
         }
 
-        private List<CharMapItem> GetCharsMapList()
+        private List<CharMapItem> GetCharsMapItemsList()
         {
             var charsMapList = new List<CharMapItem>();
 
@@ -63,34 +67,17 @@ namespace SurrogateFreeString
                 {
                     charsMapList.Add(new CharMapItem(@char, StringItemType.LowSurrogate));
                 }
+                else if (@char.IsZeroWidthJoiner())
+                {
+                    charsMapList.Add(new CharMapItem(@char, StringItemType.ZeroWidthJoiner));
+                }
                 else
                 {
-                    charsMapList.Add(new CharMapItem(@char, StringItemType.NotSurrogate));
+                    charsMapList.Add(new CharMapItem(@char, StringItemType.BasicMultilingualPlane));
                 }
             }
 
             return charsMapList;
-        }
-
-        private List<StringItem> GetAllStringItems()
-        {
-            var stringItems = new List<StringItem>();
-
-            var previousNonSurrogateCharIndex = -1;
-            //var currentStringItem
-
-            for (int i = 0; i < @String.Length; i++)
-            {
-                var currentChar = @String[i];
-
-                if (!char.IsHighSurrogate(currentChar) &&
-                    !char.IsLowSurrogate(currentChar))
-                {
-                    previousNonSurrogateCharIndex = i;
-                }
-            }
-
-            return stringItems;
         }
 
         #endregion
@@ -121,6 +108,7 @@ namespace SurrogateFreeString
     {
         HighSurrogate,
         LowSurrogate,
-        NotSurrogate
+        ZeroWidthJoiner,
+        BasicMultilingualPlane
     }
 }
