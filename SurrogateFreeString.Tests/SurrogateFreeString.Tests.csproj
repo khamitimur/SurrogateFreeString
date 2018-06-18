@@ -51,6 +51,7 @@
     <Compile Include="EmojiAwareStringTests.cs" />
     <Compile Include="SFStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkinToneHelperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
