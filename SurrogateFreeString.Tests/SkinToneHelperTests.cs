@@ -30,6 +30,7 @@ namespace SurrogateFreeString.Tests
             Assert.AreEqual(false, CRYING_EMOJI.IsSkinToneModifier());
             Assert.AreEqual(false, ADULT_EMOJI_WITH_DARK_SKINTONE.IsSkinToneModifier());
             Assert.AreEqual(false, "".IsSkinToneModifier());
+            Assert.AreEqual(false, "This is a library!".IsSkinToneModifier());
             Assert.AreEqual(false, SkinToneHelper.IsSkinToneModifier(null));
         }
 
